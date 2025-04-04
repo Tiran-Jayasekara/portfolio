@@ -34,9 +34,14 @@ jobs:
             
             npm install --force
             npm run build
+            
+             if ! command -v serve &> /dev/null; then
+              npm install -g serve
+            fi
 
-            npm install -g serve
-
+            # Kill the existing PM2 process if it exists
             pm2 delete "portpolio" || true
+
+            # Start serving the static files with PM2
             pm2 start "serve" --name "portpolio" -- -s dist -l 3010
             pm2 save
