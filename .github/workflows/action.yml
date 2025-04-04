@@ -39,4 +39,3 @@ jobs:
 
             pm2 delete "portpolio" || true
             pm2 start "serve" --name "portpolio" -- -s dist -l 3010
-            pm2 save
