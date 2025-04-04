@@ -11,12 +11,13 @@ jobs:
   deploy_qa:
     if: github.ref == 'refs/heads/deploy'
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Connect with VPS
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.0
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -26,7 +27,7 @@ jobs:
             mkdir -p apps/portpolio && cd apps/portpolio
             
             if [ -d ".git" ]; then
-              git stash
+              git checkout deploy
               git pull origin deploy
             else
               git clone -b deploy git@github.com:Tiran-Jayasekara/portfolio.git .
@@ -40,3 +41,5 @@ jobs:
             pm2 delete "portpolio" || true
             pm2 start "serve" --name "portpolio" -- -s dist -l 3010
             pm2 save
+
+            echo "Deployment Successful"
