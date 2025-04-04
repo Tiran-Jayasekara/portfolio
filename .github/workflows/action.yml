@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - staging
-      - gh-pages
+      - deploy
       - main
 
 jobs:
   deploy_qa:
-    if: github.ref == 'refs/heads/gh-pages'
+    if: github.ref == 'refs/heads/deploy'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -27,9 +27,9 @@ jobs:
             
             if [ -d ".git" ]; then
               git stash
-              git pull origin gh-pages
+              git pull origin deploy
             else
-              git clone -b gh-pages git@github.com:Tiran-Jayasekara/portfolio.git .
+              git clone -b deploy git@github.com:Tiran-Jayasekara/portfolio.git .
             fi
             
             npm install --force
