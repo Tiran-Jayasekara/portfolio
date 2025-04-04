@@ -35,14 +35,8 @@ jobs:
             npm install --force
             npm run build
 
-            pid=$(pm2 pid "portpolio" 2>/dev/null)
-            if [ -n "$pid" ]; then
-              echo "Reloading application"
-              pm2 reload "portpolio"
-              pm2 save
-            else
-              echo "New application"
-              pm2 start npm --name "portpolio" -- start
-              pm2 startup
-              pm2 save
-            fi
+            npm install -g serve
+
+            pm2 delete "portpolio" || true
+            pm2 start "serve" --name "portpolio" -- -s dist -l 3010
+            pm2 save
