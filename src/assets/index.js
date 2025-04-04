@@ -33,6 +33,24 @@ import carrent from "./book.png";
 import jobit from "./traveler.png";
 import tripguide from "./car2.png";
 import sign from "./sign.jpg";
+import pwa from "./PWA.png";
+import cicd from "./cicd.png";
+import hashbaze from "./hash.png";
+import peerwave from "./peerwave.png";
+import mui from "./mui.png";
+import zustand from "./zustand.png";
+import docker from "./docker.webp";
+import ssk from "./ssk.png";
+import ud from "./ud.jpg";
+import cyberpola from "./cyberpola.png";
+import atdigital from "./atdigital.png";
+import ui from "./ui.jpg";
+import empite from "./empite.png";
+import contry from "./contry.png";
+import peerwaveecom from "./peerwaveecom.png";
+import weather from "./weather.png";
+import dog from "./dog.png";
+import bee from "./bee.png";
 
 export {
   logo,
@@ -66,5 +84,22 @@ export {
   MySQL,
   Elzian,
   sign,
-  
+  pwa,
+  cicd,
+  hashbaze,
+  peerwave,
+  mui,
+  zustand,
+  docker,
+  ssk,
+  ud,
+  cyberpola,
+  atdigital,
+  ui,
+  empite,
+  contry,
+  peerwaveecom,
+  weather,
+  dog,
+  bee
 };

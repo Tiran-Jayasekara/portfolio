@@ -34,8 +34,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_ihk1cj4',
-        'template_0ho93ll',
+        'service_afcv394',
+        'template_hkjpm5m',
         {
           from_name: form.name,
           to_name: "Tiran Jayasekara",
@@ -43,7 +43,7 @@ const Contact = () => {
           to_email: 'tiran.jayasekara.999@gmail.com',
           message: form.message,
         },
-        'UBrmu361AL70KShiJ'
+        'xGJWqQYz6fRkk7ThV'
       )
       .then(
         () => {
