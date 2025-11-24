@@ -51,6 +51,7 @@ import peerwaveecom from "./peerwaveecom.png";
 import weather from "./weather.png";
 import dog from "./dog.png";
 import bee from "./bee.png";
+import profile from "./profile.png";
 
 export {
   logo,
@@ -101,5 +102,6 @@ export {
   peerwaveecom,
   weather,
   dog,
-  bee
+  bee,
+  profile
 };

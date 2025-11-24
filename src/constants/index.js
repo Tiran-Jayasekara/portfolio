@@ -172,12 +172,13 @@ const experiences = [
       "Delivered high-quality, production-ready solutions while communicating effectively with clients.",
     ],
   },
+  
   {
-    title: "Associate Software Engineer",
+    title: " Associate Software Engineer -  Software Engineer -  Senior Software Engineer",
     company_name: "HashBaze",
     icon: hashbaze,
     iconBg: "#E6DEDD",
-    date: "March 2024 - Present",
+    date: "February 2023 - Present",
     points: [
       "Contributed to real-world projects including web applications, admin dashboards, and a Word Add-in application.",
       "Gained hands-on experience with modern technologies such as React.js, Material UI, Zustand, and Vanilla CSS.",
