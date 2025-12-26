@@ -47,14 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm an Associate Software Engineer with over 1.5 years of experience in
-        web development, including 6 months as an intern and 1 year as an
-        Associate Software Engineer. I specialize in React, Next.js, Redux,
-        Zustand, Tailwind CSS, Material-UI, and Vanilla CSS, with additional
-        expertise in WebSockets, CI/CD pipelines (GitHub Actions), and cloud
-        hosting (Hostinger). I am passionate about building scalable, efficient,
-        and user-friendly applications while continuously learning and adapting
-        to new technologies.
+        I am a dedicated and results-driven Software Engineer with over 3 years of hands-on experience in full-stack application development. I specialize in building scalable, high-performance web applications using technologies such as React.js, Next.js, Node.js, Express.js, Nest.js, MongoDB, PostgreSQL, Firebase, and modern UI frameworks. With strong expertise in both front-end and back-end engineering, I am passionate about designing clean architectures, writing maintainable code, and delivering impactful solutions. I am highly adaptable, self-motivated, and continuously focused on improving my technical capabilities while contributing effectively to team and organizational goals.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 ">
