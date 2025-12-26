@@ -23,7 +23,8 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            mkdir -p apps/portpolio && cd apps/portpolio
+            mkdir -p apps/portpolio
+            cd apps/portpolio
             
             if [ -d ".git" ]; then
               git stash
@@ -32,7 +33,7 @@ jobs:
               git clone -b deploy git@github.com:Tiran-Jayasekara/portfolio.git .
             fi
             
-            npm install --force
+            npm install --legacy-peer-deps
             npm run build
             
              if ! command -v serve &> /dev/null; then
@@ -43,5 +44,5 @@ jobs:
             pm2 delete "portpolio" || true
 
             # Start serving the static files with PM2
-            pm2 start "serve" --name "portpolio" -- -s dist -l 3010
+            pm2 start npm --name "portfolio" -- start
             pm2 save
